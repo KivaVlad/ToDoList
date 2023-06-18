@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import ToDo from './ToDo'
-import ToDoForm from './ToDoForm'
+import ToDo from "./components/ToDo";
+import ToDoForm from './components/ToDoForm';
+
+
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -21,11 +23,9 @@ function App() {
   }
 
   const handleToggle = (id) => {
-    setTodos([
-      ...todos.map((todo) => 
+    setTodos([...todos.map((todo) => 
         todo.id === id ? { ...todo, complete: !todo.complete } : {...todo }
-      )
-    ])
+      )])
   }
 
   return (
@@ -41,7 +41,7 @@ function App() {
             key={todo.id}
             toggleTask={handleToggle}
             removeTask={removeTask}
-            />
+          />
         )
       })}
     </div>

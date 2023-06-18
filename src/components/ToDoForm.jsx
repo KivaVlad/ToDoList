@@ -21,7 +21,7 @@ function ToDoForm({ addTask }) {
     
     return (
         <form onSubmit={handleSubmit}>
-            <input 
+            <input
                 value={userInput}
                 type="text"
                 onChange={handleChange}

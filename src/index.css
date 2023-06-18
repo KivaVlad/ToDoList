@@ -3,8 +3,8 @@
 }
 
 .App .item-todo {
+  width: 270px;
   padding: 14px;
-  width: 250px;
   margin: 0 auto;
   text-align: left;
   margin-top: 15px;

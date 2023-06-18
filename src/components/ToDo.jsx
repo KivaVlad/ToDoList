@@ -1,3 +1,6 @@
+import closeIcon from "../assets/image/close-icon.svg";
+
+
 function ToDo({ todo, toggleTask, removeTask }) {
     return (
         <div key={todo.id} className="item-todo">
@@ -8,7 +11,7 @@ function ToDo({ todo, toggleTask, removeTask }) {
                 {todo.task}
             </div>
             <div className="item-delete" onClick={() => removeTask(todo.id)}>
-                X
+                <img src={closeIcon} alt="x"/>
             </div>
         </div>
     )
